@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            /* background-color: #222329fb; */
+            background-image: url("https://i.pinimg.com/originals/e8/d9/4e/e8d94e1e8b6b530ad315e9385290141b.jpg");
+
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+
+            align-content: center;
+        }
+
+        .box{
+            background-color: rgba(255,255,255,0.13);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+
+            width: 30%;
+            height: 38vh;
+            margin-left: 500px;           
+            align-content: center; 
+            border-radius: 10px;
+        }
+        input{
+            background-color: #ccdbe9;
+            width: 75%;
+            height: 5vh;
+            margin-left: 13%;
+            font-size: 14.5px;
+            border-radius: 20px;
+            border: #b6c9e4;
+            text-align: center;
+
+        }
+        h1{
+            margin-left: 40%;
+            font-family:Georgia, 'Times New Roman', Times;
+
+        }
+        button{
+            width: 40%;
+            height: 5vh;
+                font-size: 20px;
+                border-radius: 30px;
+                border: #b6c9e4;
+                background-color: #000000;
+                color: #fff;
+                font-weight: bold;
+
+        }
+        .bttn{
+            width: 100px;
+            background-color: red;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div class="container">
+        <div class="box">
+            <h1></h1>
+            <br>
+            <form action="" method="post">
+                {% csrf_token %}
+                
+                <input type="text" placeholder="Username" name= "username" required>
+                <br><br>
+                <input type="text" placeholder="Room name" name= "room" required>
+                        <br><br>
+                <center><button type="submit">Enter Room</button></center>
+                
+            </form>
+            <center> <a href="/logout/"><button class="bttn" type="submit">Logout</button></a></center>
+        </div>
+    </div>
+    
+</body>
+</html>
